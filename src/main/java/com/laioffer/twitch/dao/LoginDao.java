@@ -28,7 +28,7 @@ public class LoginDao {
         } finally {
             if (session != null) {
                 session.close();
-                
+
             }
         }
         return name; // return user name

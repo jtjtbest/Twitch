@@ -15,7 +15,8 @@ public class LogoutController {
 
     public void logout(HttpServletRequest request, HttpServletResponse response
     ) {
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession(false);// if we didnt put false, it will create a new session.
+                                                            // with false it will return null if not found.
         if (session != null) {
             session.invalidate();
         }
